@@ -113,21 +113,77 @@ export default {
     dialog: false,
     drawer: null,
     items: [
-      { icon: "contacts", text: "门诊挂号", id: "out_reg" },
-      { icon: "history", text: "划价收款", id: "out_cash" },
-      { icon: "content_copy", text: "交班结算", id: "out_chk" },
-      { icon: "keyboard", text: "发票号管理", id: "out_receipt" },
+      { icon: "contacts", 
+        text: "设备基础数据", 
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "科室管理", id: "detail_reg" },
+          { text: "人员管理", id: "detail_cash" },
+          { text: "期间划分调整", id: "detail_chk" },
+          { text: "设备供应商管理", id: "detail_undo" },
+          { text: "设备目录管理", id: "detail_op" },
+          { text: "设备使用状态", id: "detail_undo2" },
+          { text: "设备入出分类", id: "detail_undo3" }
+        ]
+      },
+      { icon: "history", 
+        text: "设备采购计划",
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "设备购买申请", id: "detail_reg4" },
+          { text: "设计采购计划", id: "detail_cash4" }
+        ]
+      },
+      { icon: "content_copy", 
+        text: "设备库房管理", 
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "设备采购入库", id: "detail_c1" },
+          { text: "其他入库", id: "detail_c2" },
+          { text: "设备调拨", id: "detail_c3" },
+          { text: "设备领用", id: "detail_c4" },
+          { text: "其他出库", id: "detail_c5" },
+          { text: "设备盘存", id: "detail_c6" },
+          { text: "设备卡片管理", id: "detail_c7" }
+        ]
+      },
+      { icon: "keyboard", 
+        text: "在用设备管理", 
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "设备使用管理", id: "detail_d1" },
+          { text: "设备保养管理", id: "detail_d2" },
+          { text: "设备检查管理", id: "detail_d3" },
+          { text: "设备维修管理", id: "detail_d4" },
+          { text: "设备变动管理", id: "detail_d5" },
+          { text: "设备折旧管理", id: "detail_d6" },
+          { text: "设备下帐管理", id: "detail_d7" }
+        ]
+      },
       {
         icon: "keyboard_arrow_up",
         "icon-alt": "keyboard_arrow_down",
-        text: "查询与统计",
-        model: true,
+        text: "查询与分析",
+        model: false,
         children: [
-          { text: "挂号明细", id: "detail_reg" },
-          { text: "收款明细", id: "detail_cash" },
-          { text: "交班明细", id: "detail_chk" },
-          { text: "退号退款明细", id: "detail_undo" },
-          { text: "操作日志", id: "detail_op" }
+          { text: "库存查询", id: "detail_e1" },
+          { text: "设备明细账", id: "detail_e2" },
+          { text: "设备入出汇总", id: "detail_e3" },
+          { text: "设备领用汇总", id: "detail_e4" },
+          { text: "设备分类帐", id: "detail_e5" },
+          { text: "价值构成状况表", id: "detail_e6" },
+          { text: "质量状况表", id: "detail_e7" },
+          { text: "设备类别状况表", id: "detail_e8" },
+          { text: "设备分布状况表", id: "detail_e9" },
+          { text: "设备增减变动表", id: "detail_e10" },
+          { text: "医疗设备效益分析", id: "detail_e11" },
+          { text: "设备明细表", id: "detail_e12" },
+          { text: "设备领用明细表", id: "detail_e13" },
+          { text: "维修统计表", id: "detail_e14" },
         ]
       },
       {
@@ -136,9 +192,8 @@ export default {
         text: "管理与维护",
         model: false,
         children: [
-          { text: "收费词典查询", id: "mg_dict" },
-          { text: "数据分析", id: "mg_analyse" },
-          { text: "发票管理", id: "mg_invoice" }
+          { text: "设备参数设置", id: "mg_dict" },
+          { text: "设备月结管理", id: "mg_analyse" }
         ]
       },
       { icon: "help", text: "退出登录", id: "logout" }
